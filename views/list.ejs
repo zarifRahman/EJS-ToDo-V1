@@ -1,0 +1,23 @@
+<%- include("header"); -%>
+
+  <div class="box" id="heading">
+    <h1> <%= findDay %></h1>
+  </div>
+
+  <div class="box">
+
+    <% for(var i=0; i<newTodoVal.length; i++) { %>
+      <div class="item">
+         <input type="checkbox">
+         <p><%= newTodoVal[i] %></p>
+      </div>
+    <% } %>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="submitValue" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="button" value=<%= findDay %> >+</button>
+    </form>
+  </div>
+
+
+<%- include("footer"); -%>
